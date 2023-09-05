@@ -34,6 +34,13 @@ module.exports = {
           'sass-loader',  // Compile SCSS to CSS
         ],
       },
+      {
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        loader: 'file-loader',
+        options: {
+          name: `[path][name].[ext]`
+        }
+      },
     ],
   },
 };
